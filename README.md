@@ -2,7 +2,7 @@
 lift and shift with lxc
 
 Current challenges for lift and shift:
-1. Huge manual intervention Involved in performing Lift and Shift
+1. Huge manual intervention involved in performing Lift and Shift
 2. Application configuration like Autoconfig , etc. required to be executed at application & DB layer
 3. Application Product expertise required to complete the process
 4. Chances of errors and troubleshooting required
@@ -12,7 +12,7 @@ Benefits of using LXC:
 2. Lift and Shift of Apps not dependent on Product expertise
 3. Same template can be used for any Apps
 4. Can be fully automated
-5. Seamless replication strategy for DR
+5. Seamless replication strategy for DR using rsync even for OS updates.
 
 Steps to use above tool:
 1. Place all the scripts in /tmp/lnsLxc of  source server
