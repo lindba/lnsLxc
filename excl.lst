@@ -5,4 +5,6 @@
 /run/*
 /sys/*
 /tmp/*
+/u01/*
+/linCd/*
 
