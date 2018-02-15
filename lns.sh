@@ -54,31 +54,3 @@ proc                    /proc                   proc    defaults        0 0
 esac;
 
 
-<<tmp
-uname.sh:
-src=3.10.0-327;
-/bin/uname.orig $*|sed -e s/$(uname.orig -r)/$src/;
-
-case  $1 in
--r) echo 3.8.13-44.1.1.el6uek.x86_64; ;;
--v) echo "#2 SMP Wed Sep 10 06:10:25 PDT 2014"; ;; 
--a) echo "Linux ebs.example.com 3.8.13-44.1.1.el6uek.x86_64 #2 SMP Wed Sep 10 06:10:25 PDT 2014 x86_64 x86_64 x86_64 GNU/Linux"; ;;
--n) uname_orig -n; ;;
--s) uname_orig -s; ;;
--m) uname_orig -m; ;;
--p) uname_orig -p; ;;
--i) uname_orig -i; ;;
--o) uname_orig -o; ;;
-*) uname_orig ; ;;
-esac;
-
---from ocic
-chkconfig udev-post off
-chkconfig oraclevm-template off
-
-
-mkdir /cgroup; mount none -t cgroup /cgroup
-
-tmp
-
-
