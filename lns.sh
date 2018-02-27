@@ -6,7 +6,7 @@ ts=/tmp/lxcSrc.tar; td=/tmp/lxcDst.tar; lxcR="$lxcHm/$lxcNm";
 sdo="ssh -i $authKey -qT -o TCPKeepAlive=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=1000 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"; sd="$sdo opc@$dstSvr"; chmod 600 $authKey;
 mknod $ts p; ifconfig $nifSrc mtu 1500;  $sd "sudo ifconfig $nifDst mtu 1500; sudo mknod $td p; sudo mkdir -p $lxcR;"
 case $cp in 
- td) tar --numeric-owner -cvf $ts -X $exclLstFl  / 1>/tmp/tarc.log 2>&1 & dd if=$ts bs=1M | $sd "nohup sudo dd of=$td status=progress " & sleep 2; $sd "sudo tar -xvf $td -C $lxcHm/$lxcNm  1>/tmp/tarx.log 2>&1";
+ td) tar --numeric-owner -cvf $ts -X $exclLstFl  / 1>/tmp/tarc.log 2>&1 & dd if=$ts bs=1M | $sd "nohup sudo dd of=$td " & sleep 2; $sd "sudo tar -xvf $td -C $lxcHm/$lxcNm  1>/tmp/tarx.log 2>&1";
  $sd <<!
   sudo su - <<!!
    cat > $lxcHm/$lxcNm.cfg <<!!!
