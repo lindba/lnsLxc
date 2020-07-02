@@ -21,4 +21,3 @@ Steps to use above tool:
 4. Run lns.sh
 5. All the configuration files and shell script to start the container will be available on the target server in the location mentioned in lns.cfg.
 
-https://objectstorage.us-phoenix-1.oraclecloud.com/n/idnsgznaeqlg/b/RavelloMigration/o/V982789-01.zip
